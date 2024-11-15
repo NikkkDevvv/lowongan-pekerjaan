@@ -1,0 +1,66 @@
+/* style.css */
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Service Images */
+.service-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Card Styles */
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Custom Styles */
+footer {
+    background-color: #f8f9fa;
+}
+
+/* Beranda Section */
+.hero-section {
+    position: relative; /* Memungkinkan posisi absolut pada overlay */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Hitam dengan transparansi 50% */
+    z-index: 1; /* Memastikan overlay di atas gambar */
+}
+
+.hero-section h1, .hero-section p {
+    position: relative; /* Memastikan teks tetap di atas overlay */
+    z-index: 2; /* Memastikan teks di atas overlay */
+}
+
+/* Kustomisasi Tombol */
+.custom-button {
+    background-color: #224eff; /* Ganti dengan warna yang diinginkan */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghilangkan border */
+    padding: 10px 20px; /* Ukuran padding */
+    border-radius: 5px; /* Membuat sudut tombol bulat */
+    transition: background-color 0.3s; /* Animasi saat hover */
+    z-index: 2; /* Memastikan tombol di atas overlay */
+    position: relative; /* Memungkinkan penggunaan z-index */
+}
+
+.custom-button:hover {
+    background-color: #20da9c; /* Warna saat hover */
+}
